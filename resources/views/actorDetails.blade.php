@@ -10,8 +10,8 @@
 
 
                     <h2> Movies Name</h2>
-                    @foreach($movies as $movie)
-                        <h3><a href="{{ route('movieDetails',$movie->id) }}">{{$movie->name}}</a></h3>
+                    @foreach($actor->movies as $movie)
+                        <h3><a href="{{ route('movies.show',$movie->id) }}">{{$movie->name}}</a></h3>
 
                     @endforeach
 

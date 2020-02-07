@@ -9,14 +9,14 @@
                 <div class="card-body">
                     @foreach($movies as $movie)
                         <h2>
-                            <a href="{{ route('movieDetails',$movie->id) }}">{{$movie->name}}</a>
+                            <a href="{{ route('movies.show',$movie->id) }}">{{$movie->name}}</a>
                         </h2>
 
                     @endforeach
 
                     {{-- check the user is auth or not --}}
                     @if(auth()->check())
-                        <form action="{{route('addMovie')}}" method="post">
+                        <form action="{{route('movies.store')}}" method="post">
                             @csrf
                             <input type="text" name="name" placeholder="Movie Name">
                             <button type="submit">Add Movie</button>

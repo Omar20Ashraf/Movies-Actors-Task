@@ -9,9 +9,9 @@
                 <div class="card-body">
 
                     {{-- check to see if there is actors added for this mpvie or not --}}
-                    @if(count($actors) > 0)
+                    @if(count($movie->actors) > 0)
                         <h2>Actors Name</h2>
-                        @foreach($actors as $actor)
+                        @foreach($movie->actors as $actor)
                             <h2>
                                 <a href="{{ route('actorDetails',$actor->id) }}">{{$actor->name}}</a>
                             </h2>
